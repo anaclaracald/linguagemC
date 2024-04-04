@@ -30,7 +30,11 @@ int main(){
             break;
         case 4:
             printf("Voce escolheu divisao.\n");
-            printf("Divisao:\n %d : %d = %d", numero1, numero2, numero1/numero2);
+            if(numero2 != 0){
+                printf("Divisao:\n %d : %d = %d", numero1, numero2, numero1/numero2);
+            }else{
+                print('Nao e possivel dividir um numero por 0.');
+            }
             break;
         case 5:
             printf("Voce escolheu o resto a divisao.\n");
