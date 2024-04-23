@@ -1,0 +1,12 @@
+Um int representa 4 bytes e vai ocupando o banco de dados
+
+índice da onde o conteúdo se encontra dentro do vetor
+
+todo vetor ou array inicia em 0
+
+vetor = tipo, nome, tamanho em numero de posições
+int vetor[5] = {10,20,30,40,50};
+
+acessar alguma posição do vetor
+vetor[0] = 10;   
+  
