@@ -1,18 +1,7 @@
 **Exercícios sobre Matrizes em C:**
 
-**Exercício 2:**
-Crie duas matrizes 2x2 e realize a soma entre elas. Armazene o
-resultado em uma terceira matriz e exiba o resultado na tela.
 
-**Exercício 3:**
-Crie uma matriz 4x4 e preencha-a com números aleatórios. Em
-seguida, calcule e imprima a soma de cada linha e de cada
-coluna.
 
-**Exercício 4:**
-Crie uma matriz 3x3 e realize a multiplicação de todos os seus
-elementos por um valor fornecido pelo usuário. Exiba a matriz
-resultante.
 
 
 
