@@ -1,18 +1,5 @@
-**Exercícios sobre Matrizes em C:**
-
-
-
-
-
-
-
-
 **Exercícios sobre Structs em C:**
-**Exercício 1:**
-Crie uma `struct` chamada `Livro` que armazene as seguintes
-informações sobre um livro: título, autor e ano de publicação.
-Em seguida, escreva um programa que cria uma instância dessa
-`struct` e imprime as informações do livro.
+
 
 **Exercício 2:**
 Crie uma `struct` chamada `Retângulo` que represente um
