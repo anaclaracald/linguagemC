@@ -80,21 +80,14 @@ int main() {
     }
     printf("\n"); 
 
-    clock_t inicio = clock();
-
     mergeSort(vetor, 0, TAMANHO_VETOR - 1); // Chama a função para ordenar o vetor
 
-    clock_t fim = clock();
-    double tempo_execucao = (double)(fim - inicio) / CLOCKS_PER_SEC;
-
-    // Imprime o vetor ordenado
-    printf("Vetor ordenado: ");
+    // Exibe o vetor ordenado
+    printf("Vetor ordenado: "); 
     for (indice = 0; indice < TAMANHO_VETOR; indice++) {
-        printf("%d ", vetor[indice]);
+        printf("%d ", vetor[indice]); 
     }
-    printf("\n");
-    
-    // Exibe o tempo de execução
-    printf("Tempo de execução: %.6f segundos\n", tempo_execucao);
-    return 0;
+    printf("\n"); 
+
+    return 0; 
 }
