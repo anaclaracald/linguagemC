@@ -35,15 +35,22 @@ int main() {
     }
     printf("\n");
 
+    clock_t inicio = clock();
+
     // Ordena o vetor usando Shell Sort
     shellSort(vetor, TAMANHO_VETOR);
 
-    // Exibe o vetor após a ordenação
+    clock_t fim = clock();
+    double tempo_execucao = (double)(fim - inicio) / CLOCKS_PER_SEC;
+
+    // Imprime o vetor ordenado
     printf("Vetor ordenado: ");
     for (indice = 0; indice < TAMANHO_VETOR; indice++) {
         printf("%d ", vetor[indice]);
     }
     printf("\n");
-
+    
+    // Exibe o tempo de execução
+    printf("Tempo de execução: %.6f segundos\n", tempo_execucao);
     return 0;
 }

@@ -36,16 +36,23 @@ int main() {
         printf("%d ", vetor[indice]); 
     }
     printf("\n"); 
+
+    clock_t inicio = clock();
     
     // Chama a funcao para ordenar o vetor
     insertionSort(vetor, TAMANHO_VETOR); 
     
-    // Imprime o vetor ordenado
-    printf("Vetor ordenado: "); 
-    for (indice = 0; indice < TAMANHO_VETOR; indice++) {
-        printf("%d ", vetor[indice]); 
-    }
-    printf("\n"); 
+    clock_t fim = clock();
+    double tempo_execucao = (double)(fim - inicio) / CLOCKS_PER_SEC;
 
-    return 0; 
+    // Imprime o vetor ordenado
+    printf("Vetor ordenado: ");
+    for (indice = 0; indice < TAMANHO_VETOR; indice++) {
+        printf("%d ", vetor[indice]);
+    }
+    printf("\n");
+    
+    // Exibe o tempo de execução
+    printf("Tempo de execução: %.6f segundos\n", tempo_execucao);
+    return 0;
 }
