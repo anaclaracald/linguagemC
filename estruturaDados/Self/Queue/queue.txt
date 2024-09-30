@@ -1,0 +1,12 @@
+Demanda maior do que a oferta
+
+exemplo mais prático é a impressora
+que possui um mecanismo para imprimir de acordo com a fila de impressão
+CPU é constituido de fila também mas tudo é organizado em filas
+
+2  operações principais:
+ - Inserir na fila só se insere no final da fila
+ - Remoção ocorre no início da fila 
+
+ FIFO - First-In, First-Out
+ primeiro a entrar é o primeiro a sair
