@@ -4,17 +4,16 @@
 
 #define TAMANHO_VETOR 6
 
-// Função Selection Sort com os parâmetros vetor e seu tamanho
 void selectionSort(int vetor[], int tamanho) {
-    int i, j, indiceMenor, auxiliar; // declara as variáveis necessárias
+    int i, j, indiceMenor, auxiliar; 
 
-    // Percorre o vetor até o penúltimo elemento, pois no fim o último elemento já estará no lugar certo
+    // Percorre o vetor ate o penultimo elemento, pois no fim o último elemento ja estara no lugar certo
     for (i = 0; i < tamanho - 1; i++) {
         indiceMenor = i; // Inicializa indiceMenor, assumindo que o menor é a posição atual i
 
-        for (j = i + 1; j < tamanho; j++) {// Encontra o menor elemento no vetor não ordenado
+        for (j = i + 1; j < tamanho; j++) {// Encontra o menor elemento no vetor nao ordenado
             
-            if (vetor[j] < vetor[indiceMenor]) {// verifica qual o menor elemento e passa seu novo índice
+            if (vetor[j] < vetor[indiceMenor]) {// verifica qual o menor elemento e passa seu novo indice
                 indiceMenor = j;
             }
         }
@@ -30,16 +29,15 @@ void selectionSort(int vetor[], int tamanho) {
 int main() {
     int vetor[TAMANHO_VETOR];
     int indice, numeroAleatorio;
-    // Inicializa o gerador de números aleatórios
     srand(time(NULL));
 
-    // Preenche o vetor com valores aleatórios e únicos
+    // Preenche o vetor com valores aleatorios e unicos
     for (indice = 0; indice < TAMANHO_VETOR; indice++) {
-        numeroAleatorio = rand() % 100; // Gera números aleatórios entre 0 e 99
+        numeroAleatorio = rand() % 100;
         vetor[indice] = numeroAleatorio;
     }
 
-    // Exibe o vetor antes da ordenação
+    // Exibe o vetor antes da ordenacao
     printf("Vetor original: ");
     for (indice = 0; indice < TAMANHO_VETOR; indice++) {
         printf("%d ", vetor[indice]);
@@ -49,7 +47,7 @@ int main() {
     // Ordena o vetor usando Selection Sort
     selectionSort(vetor, TAMANHO_VETOR);
 
-    // Exibe o vetor após a ordenação
+    // Exibe o vetor apos a ordenacao
     printf("Vetor ordenado: ");
     for (indice = 0; indice < TAMANHO_VETOR; indice++) {
         printf("%d ", vetor[indice]);

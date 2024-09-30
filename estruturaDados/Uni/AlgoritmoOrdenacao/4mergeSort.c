@@ -2,11 +2,11 @@
 #include <stdlib.h> 
 #include <time.h>   
 
-#define TAMANHO_VETOR 6 // Define o tamanho do vetor como 6
+#define TAMANHO_VETOR 6 
 
-// Função para mesclar os subarrays
+// Funcao para mesclar os subarrays
 void merge(int vetor[], int inicio, int meio, int fim) {
-    int i, j, k; // Declara variáveis para os índices dos subarrays
+    int i, j, k; // Declara variaveis para os indices dos subarrays
     int n1 = meio - inicio + 1; // Tamanho do subarray da esquerda
     int n2 = fim - meio; // Tamanho do subarray da direita
 
@@ -22,41 +22,40 @@ void merge(int vetor[], int inicio, int meio, int fim) {
     //Inicializa os subarrays
     i = 0; 
     j = 0; 
-    k = inicio; // Índice inicial do vetor original
+    k = inicio; // Indice inicial do vetor original
 
     // Mescla os subarrays de volta no vetor original
     while (i < n1 && j < n2) {
         if (L[i] <= R[j]) { // Se o elemento em L for menor ou igual ao elemento em R
             vetor[k] = L[i]; // Coloca o elemento de L no vetor
-            i++; // Move o índice do subarray L
+            i++; 
         } else {
-            vetor[k] = R[j]; // Caso contrário, coloca o elemento de R no vetor
-            j++; // Move o índice do subarray R
+            vetor[k] = R[j]; // Caso contrario, coloca o elemento de R no vetor
+            j++; 
         }
-        k++; // Move o índice do vetor original
+        k++;
     }
 
     // Copia os elementos restantes de L, se houver
     while (i < n1) {
         vetor[k] = L[i]; // Coloca o elemento restante de L no vetor
-        i++; // Move o índice do subarray L
-        k++; // Move o índice do vetor original
+        i++; 
+        k++;
     }
 
     // Copia os elementos restantes de R, se houver
     while (j < n2) {
         vetor[k] = R[j]; // Coloca o elemento restante de R no vetor
-        j++; // Move o índice do subarray R
-        k++; // Move o índice do vetor original
+        j++; 
+        k++; 
     }
 }
 
-// Função Merge Sort
 void mergeSort(int vetor[], int inicio, int fim) {
     if (inicio < fim) { // Verifica se o vetor tem mais de um elemento
         int meio = inicio + (fim - inicio) / 2; // Calcula o meio do vetor
 
-        // Chama recursivamente a função para os dois subarrays
+        // Chama recursivamente a funcao para os dois subarrays
         mergeSort(vetor, inicio, meio); // Ordena o subarray esquerdo
         mergeSort(vetor, meio + 1, fim); // Ordena o subarray direito
         merge(vetor, inicio, meio, fim); // Mescla os subarrays ordenados
@@ -64,17 +63,17 @@ void mergeSort(int vetor[], int inicio, int fim) {
 }
 
 int main() {
-    int vetor[TAMANHO_VETOR]; // Declara um vetor de inteiros
-    int indice, numeroAleatorio; // Declara variáveis para o índice e número aleatório
-    srand(time(NULL)); // Inicializa o gerador de números aleatórios com a semente do tempo atual
-
-    // Preenche o vetor com números aleatórios
+    int vetor[TAMANHO_VETOR]; 
+    int indice, numeroAleatorio; 
+    srand(time(NULL)); 
+    
+    // Preenche o vetor com numeros aleatorios
     for (indice = 0; indice < TAMANHO_VETOR; indice++) {
-        numeroAleatorio = rand() % 100; // Gera um número aleatório entre 0 e 99
-        vetor[indice] = numeroAleatorio; // Atribui o número aleatório ao vetor
+        numeroAleatorio = rand() % 100; 
+        vetor[indice] = numeroAleatorio;
     }
 
-    // Imprime o vetor antes da ordenação 
+    // Imprime o vetor antes da ordenacao 
     printf("Vetor original: "); 
     for (indice = 0; indice < TAMANHO_VETOR; indice++) {
         printf("%d ", vetor[indice]); 
